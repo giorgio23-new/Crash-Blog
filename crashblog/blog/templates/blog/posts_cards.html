@@ -1,0 +1,20 @@
+{% for post in post_list %}
+        <div class="row justify-content-center p-3">
+            <div class="col-7 shadow rounded p-4">
+                <a href="{% url 'blog:post_details' post.posts.slug post.slug %}" class="text-decoration-none text-reset">
+                    <img src="{{ post.image.url }}" class="card-img rounded-4" alt="...">
+                    <div class="container mt-3">
+                        <h6 class="text-end"><em>{{ post.created_at|timesince }} ago</em></h6>
+                        <h2><b>{{ post.title }}</b></h2>
+                        <p>{{ post.intro }}</p>
+                        <p><strong>{{ post.posts }}</strong></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% empty %}
+    <div class="row justify-content-center">
+        {% load static %}
+        <img src="{% static 'empty.png' %}" class="w-50">
+    </div>
+{% endfor %}

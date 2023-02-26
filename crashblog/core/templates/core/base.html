@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock title %} Crash Blog</title>
+        {% load static %}
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    </head>
+    
+    <body>
+      {% include 'core/navbar.html' %}       
+      <div class="py-4"></div>
+      <section class="section p-5">
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+      </section>
+      <footer class="footer bg-body-tertiary p-5">
+          <div class="container text-center fw-light">
+              <p>
+                  Copyrigth (c) 2023 - Crash Blog
+              </p>
+          </div>
+      </footer>        
+    </body>
+
+</html>

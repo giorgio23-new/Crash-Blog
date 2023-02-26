@@ -1,0 +1,11 @@
+To Do List
+- Install software on server
+- Create postgresql database
+- Install virtualenv
+- Create Group and User
+- Create Enviroment
+- Get Project from Git
+- Install packages and postgresql
+- Install and set up gunicorn
+- Install and set supervisor
+- Set up Nginx 
